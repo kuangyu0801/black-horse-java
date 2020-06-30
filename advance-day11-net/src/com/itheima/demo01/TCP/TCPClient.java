@@ -40,7 +40,8 @@ public class TCPClient {
     public static void main(String[] args) throws IOException {
         //1.创建一个客户端对象Socket,构造方法绑定服务器的IP地址和端口号
         InetAddress IPAddress = InetAddress.getByName("localhost");
-        Socket socket = new Socket("192.168.0.1",8888);
+        System.out.println(IPAddress);
+        Socket socket = new Socket(IPAddress,8888);
         //2.使用Socket对象中的方法getOutputStream()获取网络字节输出流OutputStream对象
         OutputStream os = socket.getOutputStream();
         //3.使用网络字节输出流OutputStream对象中的方法write,给服务器发送数据
