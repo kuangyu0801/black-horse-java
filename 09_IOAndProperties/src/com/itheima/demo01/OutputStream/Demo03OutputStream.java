@@ -19,10 +19,10 @@ import java.io.IOException;
  */
 public class Demo03OutputStream {
     public static void main(String[] args) throws IOException {
-        FileOutputStream fos = new FileOutputStream("09_IOAndProperties\\c.txt",true);
+        FileOutputStream fos = new FileOutputStream("09_IOAndProperties/c.txt",true);
         for (int i = 1; i <=10 ; i++) {
             fos.write("你好".getBytes());
-            fos.write("\r\n".getBytes());
+            fos.write("\r".getBytes());
         }
 
         fos.close();

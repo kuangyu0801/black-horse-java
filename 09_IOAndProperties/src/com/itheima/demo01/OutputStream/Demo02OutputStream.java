@@ -13,7 +13,7 @@ import java.util.Arrays;
 public class Demo02OutputStream {
     public static void main(String[] args) throws IOException {
         //创建FileOutputStream对象,构造方法中绑定要写入数据的目的地
-        FileOutputStream fos = new FileOutputStream(new File("09_IOAndProperties\\b.txt"));
+        FileOutputStream fos = new FileOutputStream(new File("09_IOAndProperties/myb.txt"));
         //调用FileOutputStream对象中的方法write,把数据写入到文件中
         //在文件中显示100,写个字节
         fos.write(49);
