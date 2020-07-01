@@ -13,6 +13,8 @@ import java.io.IOException;
 public class Demo05File {
     public static void main(String[] args) throws IOException {
         show03();
+        //show02();
+        //show01();
     }
 
     /*
@@ -25,11 +27,11 @@ public class Demo05File {
             delete方法是直接在硬盘删除文件/文件夹,不走回收站,删除要谨慎
      */
     private static void show03() {
-        File f1 = new File("08_FileAndRecursion\\新建文件夹");
+        File f1 = new File("advance-08-file/myaaa");
         boolean b1 = f1.delete();
         System.out.println("b1:"+b1);
 
-        File f2 = new File("08_FileAndRecursion\\abc.txt");
+        File f2 = new File("/Users/Kuang-Yu/IntelliJProjects/black-horse-java/advance-08--");
         System.out.println(f2.delete());
     }
 
@@ -44,21 +46,21 @@ public class Demo05File {
             1.此方法只能创建文件夹,不能创建文件
      */
     private static void show02() {
-        File f1 = new File("08_FileAndRecursion\\aaa");
+        File f1 = new File("advance-08-file/myaaa");
         boolean b1 = f1.mkdir();
-        System.out.println("b1:"+b1);
+        System.out.println("b1:" + b1);
 
-        File f2 = new File("08_FileAndRecursion\\111\\222\\333\\444");
+        File f2 = new File("advance-08-file/my111/222/333/444");
         boolean b2 = f2.mkdirs();
-        System.out.println("b2:"+b2);
+        System.out.println("b2:" + b2);
 
-        File f3 = new File("08_FileAndRecursion\\abc.txt");
+        File f3 = new File("advance-08-file/myabc.txt");
         boolean b3 = f3.mkdirs();//看类型,是一个文件
-        System.out.println("b3:"+b3);
+        System.out.println("b3:" + b3);
 
-        File f4 = new File("08_F\\ccc");
+        File f4 = new File("advance-08--/ccc.txt");
         boolean b4 = f4.mkdirs();//不会抛出异常,路径不存在,不会创建
-        System.out.println("b4:"+b4);
+        System.out.println("b4:" + b4);
     }
 
     /*
@@ -75,17 +77,17 @@ public class Demo05File {
         createNewFile声明抛出了IOException,我们调用这个方法,就必须的处理这个异常,要么throws,要么trycatch
      */
     private static void show01() throws IOException {
-        File f1 = new File("C:\\Users\\itcast\\IdeaProjects\\shungyuan\\08_FileAndRecursion\\1.txt");
+        File f1 = new File("/Users/Kuang-Yu/IntelliJProjects/black-horse-java/advance-08-file/my1.txt");
         boolean b1 = f1.createNewFile();
-        System.out.println("b1:"+b1);
+        System.out.println("b1:" + b1);
 
-        File f2 = new File("08_FileAndRecursion\\2.txt");
+        File f2 = new File("advance-08-file/my2.txt");
         System.out.println(f2.createNewFile());
 
-        File f3 = new File("08_FileAndRecursion\\新建文件夹");
+        File f3 = new File("advance-08-file/myFolder");
         System.out.println(f3.createNewFile());//不要被名称迷糊,要看类型
 
-        File f4 = new File("08_FileAndRecursi\\3.txt");
+        File f4 = new File("advance-08-fil/my3.txt");
         System.out.println(f4.createNewFile());//路径不存在,抛出IOException
     }
 }
