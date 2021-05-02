@@ -2,7 +2,7 @@ package com.itheima.demo06.ThreadSafe;
 /*
     实现卖票案例
  */
-public class RunnableImpl implements Runnable{
+class RunnableImpl implements Runnable{
     //定义一个多个线程共享的票源
     private  int ticket = 100;
 

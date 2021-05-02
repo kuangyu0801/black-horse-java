@@ -17,7 +17,7 @@ import java.util.Scanner;
                     继续遍历比较
             如果循环结束了,还没有找到重复的用户名,提示用户"恭喜您,注册成功!";
  */
-public class Demo01RegisterException {
+class Demo01RegisterException {
     // 1.使用数组保存已经注册过的用户名(数据库)
     static String[] usernames = {"张三","李四","王五"};
 
